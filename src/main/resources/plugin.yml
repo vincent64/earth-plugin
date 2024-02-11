@@ -1,0 +1,33 @@
+name: EarthPlugin
+version: '${project.version}'
+main: com.vincent64.earthplugin.EarthPlugin
+description: EarthPlugin is a plugin designed for Earth-map survival. It offers an economy, shops, homes and more!
+authors: [MineBlock64]
+website: https://developer64.com
+api-version: '1.20'
+
+commands:
+  help:
+    usage: /help
+    description: View the list of commands.
+  l:
+    usage: /l
+    description: Talk to player within a 60m radius from you.
+  region:
+    usage: /region
+    description: Teleport to a region/continent in the world. There is a cooldown on this command.
+  money:
+    usage: /money
+    description: View the amount of money you currently have.
+  pay:
+    usage: /pay
+    description: Transfer money to another player.
+  rank:
+    usage: /rank
+    description: View your unlocked ranks and choose one.
+  home:
+    usage: /home
+    description: View, set or remove your personal homes you can teleport to.
+  town:
+    usage: /town
+    description: View, create or remove a town everyone can teleport to. There is a cooldown on this command.
