@@ -185,6 +185,17 @@ public class Messages {
     public static String rankListBottom =
             ChatColor.DARK_GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
 
+    public static String mapLink =
+            ChatColor.GOLD + "» " + ChatColor.YELLOW + "Dynamic map link: %s.";
+    public static String mapHide =
+            ChatColor.DARK_GREEN + "» " + ChatColor.GREEN + "You are now " + ChatColor.RED + "invisible" + ChatColor.GREEN + " on the dynamic map.";
+    public static String mapShow =
+            ChatColor.DARK_GREEN + "» " + ChatColor.GREEN + "You are now " + ChatColor.DARK_GREEN + "visible" + ChatColor.GREEN + " on the dynamic map.";
+    public static String mapInvalidCommand =
+            ChatColor.DARK_RED + "» " + ChatColor.RED + "Please enter a valid map command.";
+    public static String mapNotEnabled =
+            ChatColor.DARK_RED + "» " + ChatColor.RED + "The dynamic map is not enabled on this server.";
+
     public static String help =
             ChatColor.DARK_GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
             ChatColor.GOLD + "Help: Commands list\n" +
@@ -202,5 +213,7 @@ public class Messages {
             ChatColor.DARK_GREEN + "/rank" + ChatColor.GREEN + " - View the list of your ranks.\n" +
             ChatColor.DARK_GREEN + "/rank set [rankId]" + ChatColor.GREEN + " - Set your current rank.\n" +
             ChatColor.DARK_GREEN + "/help" + ChatColor.GREEN + " - Display this message.\n" +
+            ChatColor.DARK_GREEN + "/map" + ChatColor.GREEN + " - Get the link to the dynamic map.\n" +
+            ChatColor.DARK_GREEN + "/map [hidems/showms]" + ChatColor.GREEN + " - Hide/show yourself on the map.\n" +
             ChatColor.DARK_GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
 }
