@@ -31,3 +31,6 @@ commands:
   town:
     usage: /town
     description: View, create or remove a town everyone can teleport to. There is a cooldown on this command.
+  map:
+    usage: /map
+    description: Get the link to the dynamic map and set your visibility on it.
