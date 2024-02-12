@@ -27,6 +27,8 @@ public class Messages {
             "Make sure to read the " + ChatColor.GREEN + "rules" + ChatColor.YELLOW + " on the Discord server before playing on the server.\n" +
             "If you need help, you can type " + ChatColor.GREEN + "/help" + ChatColor.YELLOW + " or ask on the server! " + ChatColor.GOLD + "Have fun!\n" +
             ChatColor.GOLD + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
+    public static String playerCommandNotAllowed =
+            ChatColor.DARK_RED + "» " + ChatColor.RED + "This command does not exist or you are not allowed to execute it.";
 
     public static String rankUnlocked =
             ChatColor.DARK_BLUE + "» " + ChatColor.BLUE + "%s has unlocked the " + ChatColor.DARK_GREEN + "%s" + ChatColor.BLUE + " rank title !";
