@@ -88,6 +88,7 @@ public final class EarthPlugin extends JavaPlugin {
         pluginManager.registerEvents(new MoveEvent(playerData), this);
         pluginManager.registerEvents(new EntityEvent(), this);
         pluginManager.registerEvents(new CommandEvent(), this);
+        pluginManager.registerEvents(new VehicleEvent(), this);
         Log.println("Event initialized.");
     }
 
