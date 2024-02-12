@@ -34,13 +34,23 @@ public class CommandEvent implements Listener {
             String command = event.getMessage().split(" ")[0];
 
             //Check if the command is in the allowed commands list
-            for(String allowedCommand : allowedUserCommands) {
-                if(!command.equals("/" + allowedCommand)) {
-                    //Cancel the event
-                    event.setCancelled(true);
-                    player.sendMessage(Messages.playerCommandNotAllowed);
-                }
+            if(!isAllowedCommand(command)) {
+                //Cancel the event
+                event.setCancelled(true);
+                player.sendMessage(Messages.playerCommandNotAllowed);
             }
         }
+    }
+
+    private boolean isAllowedCommand(String message) {
+        boolean isAllowed = false;
+        for(String allowedCommand : allowedUserCommands) {
+            if(message.startsWith("/" + allowedCommand)) {
+                isAllowed = true;
+                break;
+            }
+        }
+
+        return isAllowed;
     }
 }
