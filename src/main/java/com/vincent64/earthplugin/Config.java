@@ -25,6 +25,7 @@ public class Config {
     public static int MYSTERY_CRATE_START_TICKS = 12_000;
     public static boolean DISABLE_EXPLOSION = true;
     public static boolean DISABLE_ADVANCEMENT_MESSAGE = false;
+    public static String SERVER_MAP_URL = "null";
 
     public static void initialize(FileConfiguration configuration) {
         SERVER_NAME = configuration.getString("SERVER_NAME", SERVER_NAME);
@@ -48,5 +49,6 @@ public class Config {
         MYSTERY_CRATE_START_TICKS = configuration.getInt("MYSTERY_CRATE_START_TICKS", MYSTERY_CRATE_START_TICKS);
         DISABLE_EXPLOSION = configuration.getBoolean("DISABLE_EXPLOSION", DISABLE_EXPLOSION);
         DISABLE_ADVANCEMENT_MESSAGE = configuration.getBoolean("DISABLE_ADVANCEMENT_MESSAGE", DISABLE_ADVANCEMENT_MESSAGE);
+        SERVER_MAP_URL = configuration.getString("SERVER_MAP_URL", SERVER_MAP_URL);
     }
 }
