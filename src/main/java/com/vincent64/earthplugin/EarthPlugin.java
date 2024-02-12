@@ -8,6 +8,7 @@ import com.vincent64.earthplugin.file.ShopData;
 import com.vincent64.earthplugin.file.TownData;
 import com.vincent64.earthplugin.file.YamlLoader;
 import com.vincent64.earthplugin.log.Log;
+import com.vincent64.earthplugin.map.Map;
 import org.bukkit.Bukkit;
 import org.bukkit.GameRule;
 import org.bukkit.World;
@@ -19,6 +20,7 @@ public final class EarthPlugin extends JavaPlugin {
     private PlayerData playerData;
     private TownData townData;
     private ShopData shopData;
+    private Map map;
     private int autosaveTask;
     private int mysteryCrateTask;
 
@@ -26,6 +28,7 @@ public final class EarthPlugin extends JavaPlugin {
     public void onEnable() {
         Log.println("Starting...");
         initializeData();
+        initializeMap();
         initializeEvents();
         initializeCommands();
         initializeGamerules();
@@ -110,11 +113,19 @@ public final class EarthPlugin extends JavaPlugin {
         Log.println("Gamerules initialized.");
     }
 
+    private void initializeMap() {
+        Log.println("Initializing map...");
+        map = new Map(townData);
+        map.updateTownMarkers(townData);
+        Log.println("Map initialized.");
+    }
+
     private void save() {
         Log.println("Saving server data...");
         playerData.save();
         shopData.save();
         townData.save();
+        map.updateTownMarkers(townData);
         Log.println("Server data saved.");
     }
 
