@@ -1,7 +1,7 @@
 name: EarthPlugin
 version: '${project.version}'
 main: com.vincent64.earthplugin.EarthPlugin
-description: EarthPlugin is a plugin designed for Earth-map survival. It offers an economy, shops, homes and more!
+description: "Minecraft plugin for Earth-map SMPs, which include a basic economy, chest shops, homes, towns and more!"
 authors: [MineBlock64]
 website: https://developer64.com
 api-version: '1.20'
