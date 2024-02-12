@@ -72,6 +72,7 @@ public final class EarthPlugin extends JavaPlugin {
         getCommand("rank").setExecutor(new RankCommand(playerData));
         getCommand("home").setExecutor(new HomeCommand(playerData));
         getCommand("town").setExecutor(new TownCommand(playerData, townData));
+        getCommand("map").setExecutor(new MapCommand(map));
         Log.println("Commands initialized.");
     }
 
@@ -86,6 +87,7 @@ public final class EarthPlugin extends JavaPlugin {
         pluginManager.registerEvents(new BlockEvent(playerData, shopData), this);
         pluginManager.registerEvents(new MoveEvent(playerData), this);
         pluginManager.registerEvents(new EntityEvent(), this);
+        pluginManager.registerEvents(new CommandEvent(), this);
         Log.println("Event initialized.");
     }
 
