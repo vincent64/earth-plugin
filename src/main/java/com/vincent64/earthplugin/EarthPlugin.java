@@ -109,7 +109,6 @@ public final class EarthPlugin extends JavaPlugin {
         world.setGameRule(GameRule.MOB_GRIEFING, false);
         world.setGameRule(GameRule.SPAWN_RADIUS, 0);
         world.setGameRule(GameRule.ANNOUNCE_ADVANCEMENTS, false);
-        world.setGameRule(GameRule.SPAWN_RADIUS, 0);
         Log.println("Gamerules initialized.");
     }
 
