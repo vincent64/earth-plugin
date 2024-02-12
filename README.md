@@ -85,6 +85,7 @@ Once a town is created, anyone can teleport to it.
 To create a town, you must use the ```/town create [name]``` command.
 You can choose any name you want. Home name and town name are independent, meaning one of your home can have the same name as a town.
 When creating a town, you have to pay a small fee. This fee is 40$ by default. There is also a cooldown for this command. The cooldown is 48h by default.
+NOTE: If you use the Dynmap plugin alongside this plugin, every town will be displayed on the map with a little green flag.
 
 To teleport to a town, use the ```/town [name]``` command.
 
