@@ -1,6 +1,7 @@
 package com.vincent64.earthplugin.event;
 
 import com.vincent64.earthplugin.Config;
+import com.vincent64.earthplugin.earth.Region;
 import com.vincent64.earthplugin.file.PlayerData;
 import com.vincent64.earthplugin.util.Messages;
 import net.md_5.bungee.api.ChatMessageType;
@@ -39,6 +40,14 @@ public class MoveEvent implements Listener {
             double distance = distance(locationFrom.getX(), locationFrom.getZ(), locationTo.getX(), locationTo.getZ());
             playerData.getStatistics().increaseDistanceWalked(player, distance);
         }
+
+        //Send a message when the player cross the equator or the arctic/antarctic circle
+        if(Region.hasCrossedEquator(locationFrom, locationTo))
+            player.sendMessage(Messages.regionEquatorCross);
+        if(Region.hasCrossedArcticCircle(locationFrom, locationTo))
+            player.sendMessage(Messages.regionNorthPoleCross);
+        if(Region.hasCrossedAntarcticCircle(locationFrom, locationTo))
+            player.sendMessage(Messages.regionSouthPoleCross);
     }
 
     private boolean isGoingOutOfWorld(double fromX, double fromZ, double toX, double toZ) {
