@@ -111,9 +111,9 @@ public enum Place {
     TIERRA_DEL_FUEGO("Tierra Del Fuego", "in", 9360, 14_784),
     AOTEAROA("Aotearoa", "on the island of", 30_072, 13_536);
 
-    private String name;
-    private String prefix;
-    private int x, z;
+    private final String name;
+    private final String prefix;
+    private final int x, z;
 
     //IMPORTANT:
     //map_x * 24 = world_x

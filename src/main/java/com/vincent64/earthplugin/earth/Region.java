@@ -7,12 +7,12 @@ public enum Region {
     ASIA("Asia", "asia", 23_760, 6744),
     AFRICA("Africa", "africa", 17_352, 9120);
 
-    public static int EQUATOR = 9696;
-    public static int EQUATOR_WIDTH = 2048;
-    public static int POLES_START = 4500;
-    private String name;
-    private String id;
-    private int x, z;
+    public static final int EQUATOR = 9696;
+    public static final int EQUATOR_WIDTH = 2048;
+    public static final int POLES_START = 4500;
+    private final String name;
+    private final String id;
+    private final int x, z;
 
     Region(String name, String id, int x, int z) {
         this.name = name;

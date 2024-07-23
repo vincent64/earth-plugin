@@ -4,7 +4,7 @@ public enum ShopType {
     SELL("sell"),
     BUY("buy");
 
-    private String name;
+    private final String name;
 
     ShopType(String name) {
         this.name = name;

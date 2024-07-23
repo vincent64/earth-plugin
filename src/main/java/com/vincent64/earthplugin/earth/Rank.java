@@ -26,9 +26,9 @@ public enum Rank {
     SOVEREIGN("Sovereign", "sovereign",
             new Requirement(MESSAGES_SENT, 1500));
 
-    private String name;
-    private String id;
-    private Requirement requirement;
+    private final String name;
+    private final String id;
+    private final Requirement requirement;
 
     Rank(String name, String id, Requirement requirement) {
         this.name = name;
