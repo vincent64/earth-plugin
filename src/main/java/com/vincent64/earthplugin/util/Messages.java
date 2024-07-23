@@ -115,6 +115,12 @@ public class Messages {
             ChatColor.DARK_RED + "» " + ChatColor.RED + "You can reuse this command again in %s.";
     public static String regionInvalidCommand =
             ChatColor.DARK_RED + "» " + ChatColor.RED + "Please enter a valid destination.";
+    public static String regionEquatorCross =
+            ChatColor.GOLD + "» " + ChatColor.YELLOW + "You have crossed the equator!";
+    public static String regionNorthPoleCross =
+            ChatColor.GOLD + "» " + ChatColor.YELLOW + "You have crossed the arctic circle! You are now in the North pole.";
+    public static String regionSouthPoleCross =
+            ChatColor.GOLD + "» " + ChatColor.YELLOW + "You have crossed the antarctic circle! You are now in the South pole.";
     public static String regionSugarCane =
             ChatColor.DARK_RED + "» " + ChatColor.RED + "Sugar cane can only grow near the equator.";
     public static String regionSweetBerries =
