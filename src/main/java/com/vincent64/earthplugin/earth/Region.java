@@ -1,5 +1,7 @@
 package com.vincent64.earthplugin.earth;
 
+import org.bukkit.Location;
+
 public enum Region {
     EUROPE("Europe", "europe", 16_608, 5112),
     NORTH_AMERICA("North America", "north-america", 6912, 5352),
@@ -40,6 +42,21 @@ public enum Region {
 
     public static boolean isNearEquator(int z) {
         return z > EQUATOR - EQUATOR_WIDTH && z < EQUATOR + EQUATOR_WIDTH;
+    }
+
+    public static boolean hasCrossedEquator(Location start, Location end) {
+        return (start.getZ() >= EQUATOR && end.getZ() < EQUATOR)
+                || (start.getZ() <= EQUATOR && end.getZ() > EQUATOR);
+    }
+
+    public static boolean hasCrossedArcticCircle(Location start, Location end) {
+        return (start.getZ() >= EQUATOR - POLES_START && end.getZ() < EQUATOR - POLES_START)
+                || (start.getZ() <= EQUATOR - POLES_START && end.getZ() > EQUATOR - POLES_START);
+    }
+
+    public static boolean hasCrossedAntarcticCircle(Location start, Location end) {
+        return (start.getZ() >= EQUATOR + POLES_START && end.getZ() < EQUATOR + POLES_START)
+                || (start.getZ() <= EQUATOR + POLES_START && end.getZ() > EQUATOR + POLES_START);
     }
 
     public String getName() {
